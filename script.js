@@ -1,6 +1,14 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var lowerCase = "abcdefghijklmnopqrstuvwxyz"
+
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+var numbers = "0123456789"
+
+var specialChar = "!@#$%^&*`/*-+=_"
+
 function generatePassword() {
   alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.")
   
