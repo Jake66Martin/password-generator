@@ -9,9 +9,9 @@ var numbers = "0123456789";
 
 var specialChar = "!@#$%^&*`/*-+=_";
 
-var finalString;
+var finalString = "";
 
-alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.");
+var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.");
   
 var prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice between 8 and 128 characters for your password. What will it be?");
 
@@ -44,7 +44,7 @@ function generatePassword(length) {
     finalString += specialChar
   } else if (prompt5 == "no") {}
 
-  // var password;
+  var password = " "
     var finalStringLength = finalString.length;
     for ( let i = 0; i < length; i++ ) {
         password += finalString.charAt(Math.floor(Math.random() * finalStringLength));
