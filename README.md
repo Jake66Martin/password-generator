@@ -4,6 +4,7 @@
 https://jake66martin.github.io/password-generator/
 
 ## Description
+(Starter code for html/css/java was used from the coding bootcamp class. I worked upon the code for javascript).
 This is my automatic password bot 3000. It can be used to generate random passwords following certain criteria. 
 It must contain 8 to 128 characters, and the user has the choice whether or not they want to include lower-
 case characters, uppercase characters, numericals, or special characters. I made sure to include edge cases
