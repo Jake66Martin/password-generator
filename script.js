@@ -12,8 +12,21 @@ var specialChar = "!@#$%^&*`/*-+=_";
 var finalString = "";
 
 var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.");
-  
+
+
+function prompter() {
+
 var prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice between 8 and 128 characters for your password. What will it be?");
+
+if (prompt1 > 8 && prompt1 < 128) {
+  return;
+} else if (!(prompt1 > 8 && prompt1 <128 && prompt1 == "")) {
+  alert("Please choose a number between 8 and 128.")
+  prompter();
+}
+}
+
+prompter()
 
 var prompt2 = prompt("*whirring noises* Now. Would you like your password to contain lower case letters? Yes or no.");
 
@@ -41,10 +54,10 @@ function generatePassword(length) {
   } else if (prompt3 == "no") {}
   
   if (prompt5 == "yes") {
-    finalString += specialChar
+    finalString += specialChar;
   } else if (prompt5 == "no") {}
 
-  var password = " "
+  var password = " ";
     var finalStringLength = finalString.length;
     for ( let i = 0; i < length; i++ ) {
         password += finalString.charAt(Math.floor(Math.random() * finalStringLength));
