@@ -16,12 +16,12 @@ var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It
 
 function prompter() {
 
-prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice between 8 and 128 characters for your password. What will it be?");
+prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice of number from 8 to 128 characters for your password. What will it be?");
 
-if (prompt1 > 8 && prompt1 < 128) {
+if (prompt1 >= 8 && prompt1 <= 128) {
   return prompt1;
 } else if (!(prompt1 > 8 && prompt1 <128 && prompt1 == "")) {
-  alert("Please choose a number between 8 and 128.")
+  alert("Please choose a number from 8 to 128.")
   prompter();
 }
 }
@@ -33,10 +33,10 @@ function prompter2() {
 
   prompt2 = prompt("*whirring noises* Now. Would you like your password to contain lower case letters? Yes or no.");
 
-  if (prompt2 == "yes") {
+  if (prompt2 == "yes", "Yes", "YEs", "YES") {
     finalString += lowerCase;
     return;
-  } else if (prompt2 == "no") {
+  } else if (prompt2 == "no", "No", "NO") {
     return;
   } else { 
     alert("Please input yes or no");
@@ -53,10 +53,10 @@ function prompter3 () {
 
 prompt3 = prompt("*computing, electricity sparks* Alright human. Would you like your password to contain upper case letters? Yes or no.");
 
-if (prompt3 == "yes") {
+if (prompt3 == "yes", "Yes", "YEs", "YES") {
   finalString += upperCase;
   return;
-} else if (prompt3 == "no") {
+} else if (prompt3 == "no", "No", "NO") {
   return;
 } else {
   alert("Please inpute yes or no");
@@ -72,10 +72,10 @@ function prompter4() {
 
 prompt4 = prompt("*more computing* How about we add numerals to your password? Yes or no.");
 
-if (prompt4 == "yes") {
+if (prompt4 == "yes", "Yes", "YEs", "YES") {
   finalString += numbers;
   return;
-} else if (prompt4 == "no") {
+} else if (prompt4 == "no", "No", "NO") {
   return;
 } else {
   alert("Please input yes or no")
@@ -91,10 +91,10 @@ function prompter5() {
 
 prompt5 = prompt("So far so great human. For your final choice, would you like to add special characters to your password? Yes or no.");
 
-if (prompt5 == "yes") {
+if (prompt5 == "yes", "Yes", "YEs", "YES") {
   finalString += specialChar;
   return;
-} else if (prompt5 == "no") {
+} else if (prompt5 == "no", "No", "NO") {
   return;
 } else {
   alert("Please input yes or no");
@@ -104,8 +104,8 @@ if (prompt5 == "yes") {
 
 prompter5();
 
-if (prompt2 == "no" && prompt3 == "no" && prompt4 == "no" && prompt5 == "no") {
-  alert("You cannot pick no for every answer human, lets restart the process")
+if (prompt2 == "no", "No", "NO" && prompt3 == "no", "No", "NO" && prompt4 == "no", "No", "NO" && prompt5 == "no", "No", "NO") {
+  alert("You cannot pick no for every answer human, lets restart the process.")
   prompter2();
   prompter3();
   prompter4();
