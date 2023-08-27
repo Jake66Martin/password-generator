@@ -11,7 +11,25 @@ var specialChar = "!@#$%^&*`/*-+=_";
 
 var finalString = "";
 
-var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.");
+
+function generatePassword(length) {
+  
+ 
+
+  var password = " ";
+    var finalStringLength = finalString.length;
+    for ( let i = 0; i < length; i++ ) {
+        password += finalString.charAt(Math.floor(Math.random() * finalStringLength));
+    }
+
+  return password;
+}
+
+
+// Write password to the #password input
+function writePassword() {
+
+  var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It seems you need help with a new password.");
 
 
 function prompter() {
@@ -112,22 +130,6 @@ if (prompt2 == "no" && prompt3 == "no" && prompt4 == "no" && prompt5 == "no") {
   prompter5();
 }
 
-function generatePassword(length) {
-  
- 
-
-  var password = " ";
-    var finalStringLength = finalString.length;
-    for ( let i = 0; i < length; i++ ) {
-        password += finalString.charAt(Math.floor(Math.random() * finalStringLength));
-    }
-
-  return password;
-}
-
-
-// Write password to the #password input
-function writePassword() {
 
   var password = generatePassword(prompt1);
   var passwordText = document.querySelector("#password");
