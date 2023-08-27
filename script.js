@@ -26,37 +26,94 @@ if (prompt1 > 8 && prompt1 < 128) {
 }
 }
 
-prompter()
+prompter();
 
 
-var prompt2 = prompt("*whirring noises* Now. Would you like your password to contain lower case letters? Yes or no.");
+function prompter2() {
 
-var prompt3 = prompt("*computing, electricity sparks* Alright human. Would you like your password to contain upper case letters? Yes or no.");
+  prompt2 = prompt("*whirring noises* Now. Would you like your password to contain lower case letters? Yes or no.");
 
-var prompt4 = prompt("*more computing* How about we add numerals to your password? Yes or no.");
+  if (prompt2 == "yes") {
+    finalString += lowerCase;
+    return;
+  } else if (prompt2 == "no") {
+    return;
+  } else { 
+    alert("Please input yes or no");
+    prompter2();
+  }
+}
 
-var prompt5 = prompt("So far so great human. For your final choice, would you like to add special characters to your password? Yes or no.");
 
+
+prompter2();
+
+
+function prompter3 () {
+
+prompt3 = prompt("*computing, electricity sparks* Alright human. Would you like your password to contain upper case letters? Yes or no.");
+
+if (prompt3 == "yes") {
+  finalString += upperCase;
+  return;
+} else if (prompt3 == "no") {
+  return;
+} else {
+  alert("Please inpute yes or no");
+  prompter3();
+}
+}
+
+prompter3();
+
+
+
+function prompter4() {
+
+prompt4 = prompt("*more computing* How about we add numerals to your password? Yes or no.");
+
+if (prompt4 == "yes") {
+  finalString += numbers;
+  return;
+} else if (prompt4 == "no") {
+  return;
+} else {
+  alert("Please input yes or no")
+  prompter4();
+}
+}
+
+prompter4();
+
+
+
+function prompter5() {
+
+prompt5 = prompt("So far so great human. For your final choice, would you like to add special characters to your password? Yes or no.");
+
+if (prompt5 == "yes") {
+  finalString += specialChar;
+  return;
+} else if (prompt5 == "no") {
+  return;
+} else {
+  alert("Please input yes or no");
+  prompter5();
+}
+}
+
+prompter5();
+
+if (prompt2 == "no" && prompt3 == "no" && prompt4 == "no" && prompt5 == "no") {
+  alert("You cannot pick no for every answer human, lets restart the process")
+  prompter2();
+  prompter3();
+  prompter4();
+  prompter5();
+}
 
 function generatePassword(length) {
  
-  if (prompt2 == "yes") {
-    finalString += lowerCase;
-  } else if (prompt2 == "no") {}
-  
-  
-  if (prompt3 == "yes") {
-    finalString += upperCase;
-  } else if (prompt3 == "no") {}
-  
-  if (prompt4 == "yes") {
-    finalString += numbers;
-  } else if (prompt3 == "no") {}
-  
-  if (prompt5 == "yes") {
-    finalString += specialChar;
-  } else if (prompt5 == "no") {}
-
   var password = " ";
     var finalStringLength = finalString.length;
     for ( let i = 0; i < length; i++ ) {
