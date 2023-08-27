@@ -10,6 +10,7 @@ case characters, uppercase characters, numericals, or special characters. I made
 around the parameters as to avoid having users input irrelevant information/information that cannot be used
 for the purpose of this application. Deviations from the parameters will force the user to re-input a proper
 value for both the number of characters and the case in which a user says "no" for all 4 possible characters.
+The user must answer the parameter questions within the prompts and then click "generate password" afterwards.
 
 ## Screenshots
 ![Screenshot (20)](https://github.com/Jake66Martin/password-generator/assets/139023505/c10e4e91-c92c-4e20-a1f4-4dd1433223ff)
