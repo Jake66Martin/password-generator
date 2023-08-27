@@ -16,10 +16,10 @@ var alert1 = alert("Beep boop! Bzzzzzz. You have activated password bot 3000. It
 
 function prompter() {
 
-var prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice between 8 and 128 characters for your password. What will it be?");
+prompt1 = prompt("Bzzzz bzzzz *machine noises* My systems tell me that you have a choice between 8 and 128 characters for your password. What will it be?");
 
 if (prompt1 > 8 && prompt1 < 128) {
-  return;
+  return prompt1;
 } else if (!(prompt1 > 8 && prompt1 <128 && prompt1 == "")) {
   alert("Please choose a number between 8 and 128.")
   prompter();
@@ -28,6 +28,7 @@ if (prompt1 > 8 && prompt1 < 128) {
 
 prompter()
 
+
 var prompt2 = prompt("*whirring noises* Now. Would you like your password to contain lower case letters? Yes or no.");
 
 var prompt3 = prompt("*computing, electricity sparks* Alright human. Would you like your password to contain upper case letters? Yes or no.");
@@ -35,7 +36,6 @@ var prompt3 = prompt("*computing, electricity sparks* Alright human. Would you l
 var prompt4 = prompt("*more computing* How about we add numerals to your password? Yes or no.");
 
 var prompt5 = prompt("So far so great human. For your final choice, would you like to add special characters to your password? Yes or no.");
-
 
 
 function generatePassword(length) {
